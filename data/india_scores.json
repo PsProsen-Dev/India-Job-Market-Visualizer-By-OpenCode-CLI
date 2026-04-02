@@ -1,0 +1,849 @@
+[
+  {
+    "nco_code": "611",
+    "title": "Market Gardeners and Crop Producers",
+    "category": "Agriculture & Fishery",
+    "exposure": 1.5,
+    "rationale": "Almost entirely physical work in unpredictable environments. No meaningful AI exposure. (NCO 611, Agriculture & Fishery)"
+  },
+  {
+    "nco_code": "522",
+    "title": "Shop Salespersons",
+    "category": "Service & Sales",
+    "exposure": 5.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 522, Service & Sales)"
+  },
+  {
+    "nco_code": "612",
+    "title": "Animal Producers",
+    "category": "Agriculture & Fishery",
+    "exposure": 1.5,
+    "rationale": "Almost entirely physical work in unpredictable environments. No meaningful AI exposure. (NCO 612, Agriculture & Fishery)"
+  },
+  {
+    "nco_code": "832",
+    "title": "Car, Van and Motorcycle Drivers",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 832, Machine Operators)"
+  },
+  {
+    "nco_code": "613",
+    "title": "Mixed Crop and Animal Producers",
+    "category": "Agriculture & Fishery",
+    "exposure": 1.5,
+    "rationale": "Almost entirely physical work in unpredictable environments. No meaningful AI exposure. (NCO 613, Agriculture & Fishery)"
+  },
+  {
+    "nco_code": "911",
+    "title": "Domestic, Hotel and Office Cleaners and Helpers",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 911, Elementary)"
+  },
+  {
+    "nco_code": "631",
+    "title": "Subsistence Crop Farmers",
+    "category": "Agriculture & Fishery",
+    "exposure": 1.5,
+    "rationale": "Almost entirely physical work in unpredictable environments. No meaningful AI exposure. (NCO 631, Agriculture & Fishery)"
+  },
+  {
+    "nco_code": "541",
+    "title": "Protective Services Workers",
+    "category": "Service & Sales",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 541, Service & Sales)"
+  },
+  {
+    "nco_code": "932",
+    "title": "Transport and Storage Labourers",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 932, Elementary)"
+  },
+  {
+    "nco_code": "234",
+    "title": "Social Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 234, Professionals)"
+  },
+  {
+    "nco_code": "731",
+    "title": "Precision Instrument Makers and Repairers",
+    "category": "Craft & Trades",
+    "exposure": 5.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 731, Craft & Trades)"
+  },
+  {
+    "nco_code": "112",
+    "title": "Managing Directors and Chief Executives",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 112, Managers)"
+  },
+  {
+    "nco_code": "512",
+    "title": "Cooks",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 512, Service & Sales)"
+  },
+  {
+    "nco_code": "521",
+    "title": "Street Food and Market Salespersons",
+    "category": "Service & Sales",
+    "exposure": 5.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 521, Service & Sales)"
+  },
+  {
+    "nco_code": "833",
+    "title": "Heavy Truck and Bus Drivers",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 833, Machine Operators)"
+  },
+  {
+    "nco_code": "723",
+    "title": "Machinery Mechanics and Repairers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 723, Craft & Trades)"
+  },
+  {
+    "nco_code": "411",
+    "title": "General Office Clerks",
+    "category": "Clerical Support",
+    "exposure": 7.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 411, Clerical Support)"
+  },
+  {
+    "nco_code": "233",
+    "title": "Archivists, Librarians and Information Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 233, Professionals)"
+  },
+  {
+    "nco_code": "711",
+    "title": "Miners, Shotfirers, Stone Cutters and Carvers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 711, Craft & Trades)"
+  },
+  {
+    "nco_code": "751",
+    "title": "Textiles, Garments and Leather Trades Workers",
+    "category": "Craft & Trades",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 751, Craft & Trades)"
+  },
+  {
+    "nco_code": "524",
+    "title": "Other Sales Workers",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 524, Service & Sales)"
+  },
+  {
+    "nco_code": "441",
+    "title": "Library and Mail Clerks",
+    "category": "Clerical Support",
+    "exposure": 7.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 441, Clerical Support)"
+  },
+  {
+    "nco_code": "741",
+    "title": "Food Processing and Related Trades Workers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 741, Craft & Trades)"
+  },
+  {
+    "nco_code": "251",
+    "title": "Software and Applications Developers and Analysts",
+    "category": "Professionals",
+    "exposure": 9.0,
+    "rationale": "Primarily digital work involving coding, data analysis, or routine information processing. AI can automate most tasks. (NCO 251, Professionals)"
+  },
+  {
+    "nco_code": "241",
+    "title": "Sales and Marketing Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 241, Professionals)"
+  },
+  {
+    "nco_code": "514",
+    "title": "Hairdressers, Beauticians and Related Workers",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 514, Service & Sales)"
+  },
+  {
+    "nco_code": "312",
+    "title": "Mining, Manufacturing and Construction Supervisors",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 312, Technicians & Associates)"
+  },
+  {
+    "nco_code": "322",
+    "title": "Nursing and Midwifery Associate Professionals",
+    "category": "Technicians & Associates",
+    "exposure": 5.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 322, Technicians & Associates)"
+  },
+  {
+    "nco_code": "413",
+    "title": "Keyboard Operators",
+    "category": "Clerical Support",
+    "exposure": 7.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 413, Clerical Support)"
+  },
+  {
+    "nco_code": "721",
+    "title": "Metal Moulders and Core Makers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 721, Craft & Trades)"
+  },
+  {
+    "nco_code": "235",
+    "title": "Religious Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 235, Professionals)"
+  },
+  {
+    "nco_code": "961",
+    "title": "Refuse Workers and Other Elementary Workers",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 961, Elementary)"
+  },
+  {
+    "nco_code": "815",
+    "title": "Rubber, Plastics and Paper Products Machine Operators",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 815, Machine Operators)"
+  },
+  {
+    "nco_code": "712",
+    "title": "Building Frame and Related Trades Workers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 712, Craft & Trades)"
+  },
+  {
+    "nco_code": "263",
+    "title": "Social and Behavioral Science Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 263, Professionals)"
+  },
+  {
+    "nco_code": "332",
+    "title": "Insurance and Real Estate Sales Agents",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 332, Technicians & Associates)"
+  },
+  {
+    "nco_code": "121",
+    "title": "Business Services and Administration Managers",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 121, Managers)"
+  },
+  {
+    "nco_code": "515",
+    "title": "Building and Housekeeping Supervisors",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 515, Service & Sales)"
+  },
+  {
+    "nco_code": "921",
+    "title": "Agricultural, Fishery and Related Labourers",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 921, Elementary)"
+  },
+  {
+    "nco_code": "752",
+    "title": "Footwear and Leather Goods Makers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 752, Craft & Trades)"
+  },
+  {
+    "nco_code": "214",
+    "title": "Engineering Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 214, Professionals)"
+  },
+  {
+    "nco_code": "931",
+    "title": "Manufacturing Labourers",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 931, Elementary)"
+  },
+  {
+    "nco_code": "632",
+    "title": "Subsistence Livestock Farmers",
+    "category": "Agriculture & Fishery",
+    "exposure": 1.5,
+    "rationale": "Almost entirely physical work in unpredictable environments. No meaningful AI exposure. (NCO 632, Agriculture & Fishery)"
+  },
+  {
+    "nco_code": "431",
+    "title": "Library and Filing Clerks",
+    "category": "Clerical Support",
+    "exposure": 7.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 431, Clerical Support)"
+  },
+  {
+    "nco_code": "231",
+    "title": "Economists, Accountants and Auditors",
+    "category": "Professionals",
+    "exposure": 8.0,
+    "rationale": "Primarily digital work involving coding, data analysis, or routine information processing. AI can automate most tasks. (NCO 231, Professionals)"
+  },
+  {
+    "nco_code": "622",
+    "title": "Fishery Workers, Hunters and Trappers",
+    "category": "Agriculture & Fishery",
+    "exposure": 1.5,
+    "rationale": "Almost entirely physical work in unpredictable environments. No meaningful AI exposure. (NCO 622, Agriculture & Fishery)"
+  },
+  {
+    "nco_code": "633",
+    "title": "Subsistence Mixed Crop and Livestock Farmers",
+    "category": "Agriculture & Fishery",
+    "exposure": 1.5,
+    "rationale": "Almost entirely physical work in unpredictable environments. No meaningful AI exposure. (NCO 633, Agriculture & Fishery)"
+  },
+  {
+    "nco_code": "713",
+    "title": "Building Finishers and Related Trades Workers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 713, Craft & Trades)"
+  },
+  {
+    "nco_code": "952",
+    "title": "Packagers and Hand Packers",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 952, Elementary)"
+  },
+  {
+    "nco_code": "421",
+    "title": "Finance and Accounting Clerks",
+    "category": "Clerical Support",
+    "exposure": 7.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 421, Clerical Support)"
+  },
+  {
+    "nco_code": "742",
+    "title": "Wood Treaters, Cabinet-makers and Related Trades Workers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 742, Craft & Trades)"
+  },
+  {
+    "nco_code": "122",
+    "title": "Sales, Marketing and Development Managers",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 122, Managers)"
+  },
+  {
+    "nco_code": "816",
+    "title": "Textile, Fur and Leather Products Machine Operators",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 816, Machine Operators)"
+  },
+  {
+    "nco_code": "261",
+    "title": "Legal Professionals (Advanced)",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 261, Professionals)"
+  },
+  {
+    "nco_code": "243",
+    "title": "Finance Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 243, Professionals)"
+  },
+  {
+    "nco_code": "912",
+    "title": "Vehicle, Window, Laundry and Other Hand Cleaning Workers",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 912, Elementary)"
+  },
+  {
+    "nco_code": "222",
+    "title": "Secondary Education Teachers",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 222, Professionals)"
+  },
+  {
+    "nco_code": "132",
+    "title": "Supply Chain, Logistics and Transport Managers",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 132, Managers)"
+  },
+  {
+    "nco_code": "834",
+    "title": "Mobile Farm and Heavy Plant Machinery Drivers",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 834, Machine Operators)"
+  },
+  {
+    "nco_code": "513",
+    "title": "Waiters and Bartenders",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 513, Service & Sales)"
+  },
+  {
+    "nco_code": "343",
+    "title": "Photographers and Image and Sound Recording Equipment Operators",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 343, Technicians & Associates)"
+  },
+  {
+    "nco_code": "321",
+    "title": "Medical and Pharmaceutical Technicians",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 321, Technicians & Associates)"
+  },
+  {
+    "nco_code": "221",
+    "title": "University and Higher Education Teachers",
+    "category": "Professionals",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 221, Professionals)"
+  },
+  {
+    "nco_code": "334",
+    "title": "Administrative Secretaries",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 334, Technicians & Associates)"
+  },
+  {
+    "nco_code": "531",
+    "title": "Child Care Workers and Teachers' Aides",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 531, Service & Sales)"
+  },
+  {
+    "nco_code": "333",
+    "title": "Commercial Sales Representatives",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 333, Technicians & Associates)"
+  },
+  {
+    "nco_code": "818",
+    "title": "Other Plant and Machine Operators",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 818, Machine Operators)"
+  },
+  {
+    "nco_code": "814",
+    "title": "Chemical Products Plant and Machine Operators",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 814, Machine Operators)"
+  },
+  {
+    "nco_code": "422",
+    "title": "Statistical, Finance and Insurance Clerks",
+    "category": "Clerical Support",
+    "exposure": 7.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 422, Clerical Support)"
+  },
+  {
+    "nco_code": "941",
+    "title": "Food Preparation Assistants",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 941, Elementary)"
+  },
+  {
+    "nco_code": "311",
+    "title": "Physical and Engineering Science Technicians",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 311, Technicians & Associates)"
+  },
+  {
+    "nco_code": "962",
+    "title": "Messengers, Porters, Doorkeepers and Related Workers",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 962, Elementary)"
+  },
+  {
+    "nco_code": "511",
+    "title": "Travel Attendants and Travel Stewards",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 511, Service & Sales)"
+  },
+  {
+    "nco_code": "134",
+    "title": "Professional Services Managers",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 134, Managers)"
+  },
+  {
+    "nco_code": "516",
+    "title": "Other Personal Services Workers",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 516, Service & Sales)"
+  },
+  {
+    "nco_code": "265",
+    "title": "Creative and Performing Artists",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 265, Professionals)"
+  },
+  {
+    "nco_code": "143",
+    "title": "Policy and Planning Managers",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 143, Managers)"
+  },
+  {
+    "nco_code": "722",
+    "title": "Blacksmiths, Toolmakers and Related Trades Workers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 722, Craft & Trades)"
+  },
+  {
+    "nco_code": "313",
+    "title": "Process Control Technicians",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 313, Technicians & Associates)"
+  },
+  {
+    "nco_code": "813",
+    "title": "Glass, Ceramics and Related Plant Operators",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 813, Machine Operators)"
+  },
+  {
+    "nco_code": "111",
+    "title": "Legislators and Senior Officials",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 111, Managers)"
+  },
+  {
+    "nco_code": "141",
+    "title": "Finance Managers",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 141, Managers)"
+  },
+  {
+    "nco_code": "432",
+    "title": "Personnel Clerks",
+    "category": "Clerical Support",
+    "exposure": 7.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 432, Clerical Support)"
+  },
+  {
+    "nco_code": "335",
+    "title": "Government Regulatory Officials",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 335, Technicians & Associates)"
+  },
+  {
+    "nco_code": "812",
+    "title": "Metal Processing and Finishing Plant Operators",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 812, Machine Operators)"
+  },
+  {
+    "nco_code": "732",
+    "title": "Jewellery and Precious Metal Workers",
+    "category": "Craft & Trades",
+    "exposure": 3.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 732, Craft & Trades)"
+  },
+  {
+    "nco_code": "331",
+    "title": "Financial and Mathematical Associate Professionals",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 331, Technicians & Associates)"
+  },
+  {
+    "nco_code": "242",
+    "title": "Business and Administration Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 242, Professionals)"
+  },
+  {
+    "nco_code": "216",
+    "title": "Electronics Engineers",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 216, Professionals)"
+  },
+  {
+    "nco_code": "523",
+    "title": "Cashiers and Ticket Clerks",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 523, Service & Sales)"
+  },
+  {
+    "nco_code": "621",
+    "title": "Forestry and Related Workers",
+    "category": "Agriculture & Fishery",
+    "exposure": 1.5,
+    "rationale": "Almost entirely physical work in unpredictable environments. No meaningful AI exposure. (NCO 621, Agriculture & Fishery)"
+  },
+  {
+    "nco_code": "142",
+    "title": "Human Resources Managers",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 142, Managers)"
+  },
+  {
+    "nco_code": "351",
+    "title": "Information and Communications Technology Operations and User Support Technicians",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 351, Technicians & Associates)"
+  },
+  {
+    "nco_code": "821",
+    "title": "Metal Products Machine Operators",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 821, Machine Operators)"
+  },
+  {
+    "nco_code": "215",
+    "title": "Electrical Engineers",
+    "category": "Professionals",
+    "exposure": 8.0,
+    "rationale": "Primarily digital work involving coding, data analysis, or routine information processing. AI can automate most tasks. (NCO 215, Professionals)"
+  },
+  {
+    "nco_code": "252",
+    "title": "Database and Network Professionals",
+    "category": "Professionals",
+    "exposure": 9.0,
+    "rationale": "Primarily digital work involving coding, data analysis, or routine information processing. AI can automate most tasks. (NCO 252, Professionals)"
+  },
+  {
+    "nco_code": "532",
+    "title": "Personal Care Workers in Health Services",
+    "category": "Service & Sales",
+    "exposure": 4.5,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 532, Service & Sales)"
+  },
+  {
+    "nco_code": "352",
+    "title": "Telecommunications and Broadcasting Technicians",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 352, Technicians & Associates)"
+  },
+  {
+    "nco_code": "224",
+    "title": "Other Teaching Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 224, Professionals)"
+  },
+  {
+    "nco_code": "133",
+    "title": "Information and Communications Technology Services Managers",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 133, Managers)"
+  },
+  {
+    "nco_code": "811",
+    "title": "Mining and Mineral Processing Plant Operators",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 811, Machine Operators)"
+  },
+  {
+    "nco_code": "831",
+    "title": "Locomotive Engine Drivers and Related Workers",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 831, Machine Operators)"
+  },
+  {
+    "nco_code": "412",
+    "title": "Secretaries",
+    "category": "Clerical Support",
+    "exposure": 7.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 412, Clerical Support)"
+  },
+  {
+    "nco_code": "634",
+    "title": "Subsistence Fishers, Hunters and Gatherers",
+    "category": "Agriculture & Fishery",
+    "exposure": 1.5,
+    "rationale": "Almost entirely physical work in unpredictable environments. No meaningful AI exposure. (NCO 634, Agriculture & Fishery)"
+  },
+  {
+    "nco_code": "342",
+    "title": "Sports and Fitness Workers",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 342, Technicians & Associates)"
+  },
+  {
+    "nco_code": "341",
+    "title": "Legal, Social and Religious Associate Professionals",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 341, Technicians & Associates)"
+  },
+  {
+    "nco_code": "264",
+    "title": "Writers, Journalists and Linguists",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 264, Professionals)"
+  },
+  {
+    "nco_code": "232",
+    "title": "Legal Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 232, Professionals)"
+  },
+  {
+    "nco_code": "951",
+    "title": "Computing Equipment, Furniture and Sports Equipment Controllers",
+    "category": "Elementary",
+    "exposure": 2.0,
+    "rationale": "Physical or manual work with limited digital exposure. AI has minimal impact on daily tasks. (NCO 951, Elementary)"
+  },
+  {
+    "nco_code": "817",
+    "title": "Wood Products Plant and Machine Operators",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 817, Machine Operators)"
+  },
+  {
+    "nco_code": "223",
+    "title": "Primary and Pre-Primary Education Teachers",
+    "category": "Professionals",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 223, Professionals)"
+  },
+  {
+    "nco_code": "324",
+    "title": "Veterinary Technicians and Assistants",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 324, Technicians & Associates)"
+  },
+  {
+    "nco_code": "131",
+    "title": "Production and Operations Managers",
+    "category": "Managers",
+    "exposure": 6.0,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 131, Managers)"
+  },
+  {
+    "nco_code": "835",
+    "title": "Ships' Deck Crews and Related Workers",
+    "category": "Machine Operators",
+    "exposure": 4.0,
+    "rationale": "Mixed work involving both digital and physical/interpersonal tasks. AI assistance possible but core work remains human-dependent. (NCO 835, Machine Operators)"
+  },
+  {
+    "nco_code": "262",
+    "title": "Librarians and Related Information Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 262, Professionals)"
+  },
+  {
+    "nco_code": "211",
+    "title": "Physicists, Chemists and Related Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 211, Professionals)"
+  },
+  {
+    "nco_code": "314",
+    "title": "Life Science Technicians",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 314, Technicians & Associates)"
+  },
+  {
+    "nco_code": "315",
+    "title": "Marine and Flight Engineers",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 315, Technicians & Associates)"
+  },
+  {
+    "nco_code": "323",
+    "title": "Traditional and Complementary Medicine Professionals",
+    "category": "Technicians & Associates",
+    "exposure": 6.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 323, Technicians & Associates)"
+  },
+  {
+    "nco_code": "213",
+    "title": "Life Science Professionals",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 213, Professionals)"
+  },
+  {
+    "nco_code": "212",
+    "title": "Mathematicians, Statisticians and Actuaries",
+    "category": "Professionals",
+    "exposure": 7.5,
+    "rationale": "Knowledge work with significant digital components. AI tools can enhance productivity but human judgment still needed. (NCO 212, Professionals)"
+  }
+]
