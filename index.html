@@ -380,14 +380,15 @@ function tileColorCSS(d, alpha) {
 
 function formatNumber(n) {
   if (n == null) return "—";
-  if (n >= 1e6) return (n / 1e6).toFixed(1) + "M";
-  if (n >= 1e3) return Math.round(n / 1e3) + "K";
-  return n.toLocaleString();
+  if (n >= 10000000) return (n / 10000000).toFixed(1) + "Cr";
+  if (n >= 100000) return (n / 100000).toFixed(1) + "L";
+  if (n >= 1000) return (n / 1000).toFixed(1) + "K";
+  return n.toLocaleString("en-IN");
 }
 
 function formatPay(n) {
   if (n == null) return "—";
-  return "₹" + n.toLocaleString();
+  return "₹" + n.toLocaleString("en-IN");
 }
 
 function tileSubInfo(r) {
@@ -593,7 +594,7 @@ function tooltipHighlight(d) {
     const v = d.pay_monthly || d.pay;
     if (v == null) return "";
     const color = payColor(v, 1);
-    return `<span style="color:${color};font-weight:600;">Median Salary: ₹${v.toLocaleString()}/mo</span>`;
+    return `<span style="color:${color};font-weight:600;">Median Salary: ₹${v.toLocaleString("en-IN")}/mo</span>`;
   } else if (colorMode === "education") {
     const edu = d.education || {};
     const topEdu = Object.keys(edu).sort((a,b) => edu[b] - edu[a])[0];
@@ -640,8 +641,8 @@ canvas.addEventListener("mousemove", e => {
         tooltip.querySelector(".tt-title").textContent = d.title;
         tooltip.querySelector(".tt-exposure").innerHTML = tooltipHighlight(d);
         
-        const jobs = (d.jobs || 0).toLocaleString();
-        const wage = d.pay_monthly ? `₹${d.pay_monthly.toLocaleString()}/mo` : "—";
+        const jobs = (d.jobs || 0).toLocaleString("en-IN");
+        const wage = d.pay_monthly ? `₹${d.pay_monthly.toLocaleString("en-IN")}/mo` : "—";
         const outlook = d.outlook != null ? `${d.outlook > 0 ? "+" : ""}${d.outlook}%` : "—";
         const female = d.female_pct != null ? `${d.female_pct}%` : "—";
         
@@ -690,7 +691,7 @@ document.getElementById("colorToggle").addEventListener("click", e => {
 
 function updateStats() {
   const totalJobs = data.reduce((s, d) => s + (d.jobs || 0), 0);
-  document.getElementById("statTotalJobs").textContent = totalJobs >= 1e6 ? (totalJobs / 1e6).toFixed(1) + "M" : totalJobs.toLocaleString();
+  document.getElementById("statTotalJobs").textContent = totalJobs >= 10000000 ? (totalJobs / 10000000).toFixed(1) + "Cr" : totalJobs >= 100000 ? (totalJobs / 100000).toFixed(1) + "L" : totalJobs.toLocaleString("en-IN");
 
   if (colorMode === "outlook") {
     let wS = 0, wC = 0, declining = 0, growing = 0;
@@ -701,8 +702,8 @@ function updateStats() {
     }
     const avg = wC > 0 ? wS / wC : 0;
     document.getElementById("block2").innerHTML = `<h3>Avg. outlook</h3><div class="stat-big"><span style="color:${outlookColor(avg, 1)}">${avg > 0 ? "+" : ""}${avg.toFixed(1)}%</span></div>`;
-    document.getElementById("block3").innerHTML = `<h3>Declining jobs</h3><div class="stat-big" style="color:${outlookColor(-5, 1)}">${(declining / 1e6).toFixed(1)}M</div><div class="stat-label">negative outlook</div>`;
-    document.getElementById("block4").innerHTML = `<h3>Growing jobs</h3><div class="stat-big" style="color:${outlookColor(10, 1)}">${(growing / 1e6).toFixed(1)}M</div><div class="stat-label">positive outlook</div>`;
+    document.getElementById("block3").innerHTML = `<h3>Declining jobs</h3><div class="stat-big" style="color:${outlookColor(-5, 1)}">${(declining / 100000).toFixed(1)}L</div><div class="stat-label">negative outlook</div>`;
+    document.getElementById("block4").innerHTML = `<h3>Growing jobs</h3><div class="stat-big" style="color:${outlookColor(10, 1)}">${(growing / 100000).toFixed(1)}L</div><div class="stat-label">positive outlook</div>`;
     document.getElementById("block5").innerHTML = "";
     document.getElementById("block6").innerHTML = "";
   }
@@ -727,7 +728,7 @@ function updateStats() {
     }
     const avg = wC > 0 ? wS / wC : 0;
     document.getElementById("block2").innerHTML = `<h3>Avg. AI exposure</h3><div class="stat-big"><span style="color:${exposureColor(avg, 1)}">${avg.toFixed(1)}</span></div><div class="stat-label">out of 10</div>`;
-    document.getElementById("block3").innerHTML = `<h3>High exposure</h3><div class="stat-big" style="color:${exposureColor(8, 1)}">${(highExp / 1e6).toFixed(1)}M</div><div class="stat-label">jobs (7+ score)</div>`;
+    document.getElementById("block3").innerHTML = `<h3>High exposure</h3><div class="stat-big" style="color:${exposureColor(8, 1)}">${(highExp / 100000).toFixed(1)}L</div><div class="stat-label">jobs (7+ score)</div>`;
     document.getElementById("block4").innerHTML = "";
     document.getElementById("block5").innerHTML = "";
     document.getElementById("block6").innerHTML = "";
@@ -739,8 +740,8 @@ function updateStats() {
       if (d.jobs && (edu["Graduate"] > 15 || edu["Post graduate"] > 10)) graduatePlus += d.jobs;
       if (d.jobs && (edu["Not literate"] > 25)) noSchool += d.jobs;
     }
-    document.getElementById("block2").innerHTML = `<h3>Graduate+ workers</h3><div class="stat-big">${(graduatePlus / 1e6).toFixed(1)}M</div>`;
-    document.getElementById("block3").innerHTML = `<h3>Not literate</h3><div class="stat-big">${(noSchool / 1e6).toFixed(1)}M</div>`;
+    document.getElementById("block2").innerHTML = `<h3>Graduate+ workers</h3><div class="stat-big">${(graduatePlus / 100000).toFixed(1)}L</div>`;
+    document.getElementById("block3").innerHTML = `<h3>Not literate</h3><div class="stat-big">${(noSchool / 100000).toFixed(1)}L</div>`;
     document.getElementById("block4").innerHTML = "";
     document.getElementById("block5").innerHTML = "";
     document.getElementById("block6").innerHTML = "";
