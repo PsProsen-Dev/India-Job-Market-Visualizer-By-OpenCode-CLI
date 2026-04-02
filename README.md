@@ -20,7 +20,7 @@ This tool visualizes **occupations** from India's labour market data:
 
 ### Prerequisites
 - Python 3.9+
-- OpenRouter API key (for AI scoring)
+- OpenRouter API key (for AI scoring) - optional, fallback scoring available
 
 ### Installation
 
@@ -37,16 +37,17 @@ pip install pandas numpy httpx python-dotenv
 
 1. **Aggregate PLFS data** (if you have raw data):
 ```bash
-cd scripts
-python aggregate_plfs.py
+python scripts/aggregate_plfs.py
 ```
 
-2. **Score AI exposure** (requires API key):
+2. **Score AI exposure** (optional - fallback available):
 ```bash
 # Create .env file with your API key
 echo "OPENROUTER_API_KEY=your_key_here" > .env
-
 python scripts/score.py
+
+# OR use fallback scoring (no API needed)
+python scripts/score_fallback.py
 ```
 
 3. **Build site data**:
@@ -70,6 +71,7 @@ India-Job-Market-Visualizer-By-OpenCode-CLI/
 │   ├── nco_mapping.py       # NCO 2015 occupation codes
 │   ├── aggregate_plfs.py    # Aggregate PLFS data to occupations
 │   ├── score.py             # AI exposure scoring (LLM)
+│   ├── score_fallback.py    # AI exposure scoring (fallback)
 │   └── build_site_data.py   # Build data.json for visualization
 ├── data/
 │   ├── india_occupations_stats.json   # Full occupation statistics
@@ -86,7 +88,7 @@ India-Job-Market-Visualizer-By-OpenCode-CLI/
 ## Data Pipeline
 
 1. **PLFS Raw Data** → Aggregate by NCO code → `india_occupations_stats.json`
-2. **Scoring** → LLM analysis → `india_scores.json`
+2. **Scoring** → LLM analysis or fallback heuristics → `india_scores.json`
 3. **Build** → Merge stats + scores → `site/data.json`
 4. **Visualize** → Treemap in browser
 
@@ -94,7 +96,7 @@ India-Job-Market-Visualizer-By-OpenCode-CLI/
 
 - **Frontend**: Pure HTML/JS (no framework)
 - **Backend**: Python scripts for data processing
-- **AI**: OpenRouter API (Gemini Flash) for scoring
+- **AI**: OpenRouter API (Gemini Flash) for scoring (optional)
 - **Data**: PLFS survey micro-data
 
 ## India-Specific Considerations
@@ -108,7 +110,7 @@ India-Job-Market-Visualizer-By-OpenCode-CLI/
 ## Known Limitations
 
 - PLFS data may have sampling limitations
-- AI exposure scores are rough estimates (LLM-generated)
+- AI exposure scores are rough estimates (LLM or heuristics)
 - Occupation descriptions are basic (no detailed scraping)
 - Growth outlook is estimated based on category trends
 
