@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>India Jobs Market Visualizer</title>
+  <meta name="description" content="A Karpathy-style interactive treemap for India’s tech job market, AI exposure, salaries, city concentration and hiring growth." />
+  <style>
+    :root{--bg:#08090f;--panel:#11131d;--panel2:#171a27;--text:#f3f6ff;--muted:#9aa3b8;--line:rgba(255,255,255,.10);--accent:#7dd3fc;--good:#22c55e;--warn:#f59e0b;--bad:#ef4444;--shadow:0 24px 80px rgba(0,0,0,.38)}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top left,rgba(59,130,246,.18),transparent 34%),radial-gradient(circle at top right,rgba(34,197,94,.10),transparent 28%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif} a{color:#bfdbfe}.wrap{max-width:1480px;margin:auto;padding:24px}.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:stretch}.card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);backdrop-filter:blur(14px)}.hero-main{padding:28px} .eyebrow{display:inline-flex;gap:8px;align-items:center;color:#c7d2fe;background:rgba(99,102,241,.14);border:1px solid rgba(165,180,252,.22);padding:7px 11px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}.hero h1{font-size:clamp(34px,5vw,74px);line-height:.92;margin:18px 0 16px;letter-spacing:-.065em}.hero p{font-size:16px;line-height:1.65;color:var(--muted);max-width:900px}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);padding:10px 14px;border-radius:14px;text-decoration:none;font-weight:700;font-size:13px}.btn.primary{background:#f8fafc;color:#08090f}.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:18px}.kpi{background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:18px;padding:16px}.kpi b{font-size:28px;display:block;letter-spacing:-.03em}.kpi span{color:var(--muted);font-size:12px}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin:18px 0}.control{padding:12px;background:rgba(17,19,29,.76);border:1px solid var(--line);border-radius:18px}.control label{display:block;font-size:11px;text-transform:uppercase;color:var(--muted);font-weight:800;letter-spacing:.08em;margin-bottom:8px}select,input{background:#090b12;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-width:180px}input{min-width:260px}.vizgrid{display:grid;grid-template-columns:1fr 340px;gap:18px}.chart{position:relative;padding:14px;min-height:720px}.canvasWrap{position:relative;height:680px;border-radius:18px;overflow:hidden;background:#070811;border:1px solid var(--line)}canvas{width:100%;height:100%;display:block}.side{padding:18px}.side h2{font-size:18px;margin:0 0 12px}.legend{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px;margin-top:10px}.grad{height:10px;flex:1;border-radius:999px;background:linear-gradient(90deg,#22c55e,#f59e0b,#ef4444)}.mini{display:grid;gap:10px;margin-top:16px}.barrow{display:grid;grid-template-columns:94px 1fr 44px;gap:8px;align-items:center;font-size:12px;color:var(--muted)}.track{height:9px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#38bdf8,#a78bfa);border-radius:99px}.tooltip{position:fixed;z-index:20;pointer-events:none;width:min(390px,calc(100vw - 24px));opacity:0;transform:translateY(6px);transition:.12s;background:rgba(15,17,28,.96);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:14px;box-shadow:var(--shadow)}.tooltip.show{opacity:1;transform:translateY(0)}.tt-title{font-weight:900;font-size:16px}.tt-cat{color:var(--accent);font-size:12px;font-weight:800;margin-top:2px}.tt-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.tt-metric{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:12px;padding:8px}.tt-metric b{display:block}.tt-metric span{color:var(--muted);font-size:11px}.pillbox{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.pill{font-size:11px;padding:5px 7px;border-radius:999px;background:rgba(125,211,252,.12);border:1px solid rgba(125,211,252,.24);color:#dbeafe}.panelgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.table{padding:18px;overflow:hidden}.table h2{margin:0 0 12px;font-size:18px}.city{display:grid;grid-template-columns:115px 1fr 48px;gap:9px;align-items:center;font-size:13px;color:var(--muted);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}.city strong{color:var(--text)}.note{margin-top:18px;padding:16px;color:var(--muted);line-height:1.6;font-size:13px}.footer{color:var(--muted);font-size:12px;text-align:center;padding:28px}.empty{position:absolute;inset:0;display:none;place-items:center;color:var(--muted)}@media(max-width:1050px){.hero,.vizgrid,.panelgrid{grid-template-columns:1fr}.canvasWrap{height:620px}.kpis{grid-template-columns:repeat(4,1fr)}}@media(max-width:720px){.wrap{padding:12px}.kpis{grid-template-columns:repeat(2,1fr)}.toolbar{display:grid}.control select,.control input{width:100%;min-width:0}.canvasWrap{height:540px}.hero-main{padding:20px}.hero h1{font-size:42px}.barrow{grid-template-columns:82px 1fr 38px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="card hero-main">
+        <span class="eyebrow">🇮🇳 Karpathy-style labour market map</span>
+        <h1>India Jobs Market Visualizer</h1>
+        <p>Interactive treemap for India’s 2024–2025 tech labour market. Rectangle area approximates role demand/headcount; color can show <b>AI exposure</b>, <b>hiring growth</b>, <b>salary</b>, <b>demand</b>, or <b>remote readiness</b>. Inspired by Andrej Karpathy’s US jobs visualizer, rebuilt for India with GCC, AI/ML, city, salary and skill-market context.</p>
+        <div class="links">
+          <a class="btn primary" href="https://github.com/PsProsen-Dev/India-Job-Market-Visualizer">GitHub repo</a>
+          <a class="btn" href="https://github.com/karpathy/jobs">Original Karpathy/jobs</a>
+          <a class="btn" href="#methodology">Methodology</a>
+        </div>
+      </div>
+      <div class="card kpis">
+        <div class="kpi"><b id="kRevenue">—</b><span>FY25 tech revenue</span></div>
+        <div class="kpi"><b id="kWorkforce">—</b><span>Tech workforce</span></div>
+        <div class="kpi"><b id="kGcc">—</b><span>GCC centers</span></div>
+        <div class="kpi"><b id="kAi">—</b><span>AI/ML hiring YoY</span></div>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Visualizer controls">
+      <div class="control"><label>Color layer</label><select id="mode"><option value="exposure">AI Exposure</option><option value="growth">Hiring Growth</option><option value="salary">Salary</option><option value="demand">Demand Score</option><option value="remote">Remote Readiness</option></select></div>
+      <div class="control"><label>Category</label><select id="category"><option value="all">All categories</option></select></div>
+      <div class="control"><label>Search role / skill / city</label><input id="search" placeholder="e.g. LLM, Pune, cybersecurity" /></div>
+      <div class="control"><label>Minimum salary</label><select id="minSalary"><option value="0">Any</option><option value="10">₹10L+</option><option value="15">₹15L+</option><option value="20">₹20L+</option><option value="30">₹30L+</option></select></div>
+    </section>
+
+    <section class="vizgrid">
+      <div class="card chart">
+        <div class="canvasWrap"><canvas id="map"></canvas><div class="empty" id="empty">No roles match the current filters.</div></div>
+      </div>
+      <aside class="card side">
+        <h2 id="sideTitle">AI Exposure</h2>
+        <p id="sideCopy" style="color:var(--muted);line-height:1.55;font-size:13px"></p>
+        <div class="legend"><span id="legendLow">Low</span><div class="grad"></div><span id="legendHigh">High</span></div>
+        <div class="mini" id="topList"></div>
+        <div class="note" id="methodology"><b style="color:var(--text)">Methodology:</b> This is a static, auditable market-intelligence visualizer. It uses approximate role headcount/demand weights, salary bands in INR LPA, 2025 hiring-growth signals, and heuristic AI exposure scores. High exposure means “work will be reshaped by AI,” not “job will vanish.”</div>
+      </aside>
+    </section>
+
+    <section class="panelgrid">
+      <div class="card table"><h2>City heatmap</h2><div id="cities"></div></div>
+      <div class="card table"><h2>Naukri JobSpeak 2025 pulse</h2><div id="pulse"></div></div>
+    </section>
+
+    <div class="footer">Built as a production static app: no framework, no tracking, CDN-free, GitHub Pages friendly.</div>
+  </div>
+  <div class="tooltip" id="tooltip"><div class="tt-title"></div><div class="tt-cat"></div><div class="tt-grid"></div><div class="tt-rationale"></div><div class="pillbox"></div></div>
+
+<script>
+const $=s=>document.querySelector(s); const fmt=n=>n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?Math.round(n/1e3)+'K':String(n);
+const modeInfo={exposure:['AI Exposure','Green means less reshaped by AI; red means more digitally transformable. This is exposure, not extinction risk.','Low','High'],growth:['Hiring Growth','Color emphasizes roles with stronger 2025 hiring momentum and structural tailwinds.','Slow','Fast'],salary:['Salary','Color emphasizes higher median India CTC / LPA role bands.','Lower','Higher'],demand:['Demand Score','Composite demand signal from growth, skill scarcity, GCC/startup relevance and salary premium.','Lower','Higher'],remote:['Remote Readiness','Higher values indicate roles more compatible with remote or hybrid delivery.','On-site','Remote']};
+let raw,roles=[],rects=[],hover=null,dpr=window.devicePixelRatio||1;
+const canvas=$('#map'),ctx=canvas.getContext('2d'),tip=$('#tooltip');
+function metric(r){return {exposure:r.exposure,growth:r.growth,salary:r.salary,demand:r.demand,remote:r.remote}[$('#mode').value]||0}
+function norm(v,mode){const ranges={exposure:[4,10],growth:[0,55],salary:[3,50],demand:[5,10],remote:[0,65]};const [a,b]=ranges[mode];return Math.max(0,Math.min(1,(v-a)/(b-a)))}
+function color(t,a=.72){t=Math.max(0,Math.min(1,t));let r,g,b;if(t<.5){let s=t/.5;r=34+s*210;g=197-s*39;b=94-s*83}else{let s=(t-.5)/.5;r=244+s*15;g=158-s*95;b=11+s*57}return `rgba(${r|0},${g|0},${b|0},${a})`}
+function textColorFor(t){return t>.68?'#fff7ed':'#ecfeff'}
+function squarify(items,x,y,w,h){if(!items.length)return[];let total=items.reduce((s,d)=>s+d.value,0)||1,out=[],rem=[...items].sort((a,b)=>b.value-a.value),cx=x,cy=y,cw=w,ch=h;while(rem.length){let side=Math.min(cw,ch),row=[],sum=0;function worst(row,sum){if(!row.length)return Infinity;let ss=side*side,vals=row.map(d=>d.value);return Math.max(ss*Math.max(...vals)/(sum*sum),(sum*sum)/(ss*Math.min(...vals)))}while(rem.length){let next=rem[0],nw=worst([...row,next],sum+next.value);if(!row.length||nw<=worst(row,sum)){row.push(next);sum+=next.value;rem.shift()}else break}let rowArea=sum/total*(w*h);if(cw>=ch){let rw=rowArea/ch,oy=0;for(const it of row){let rh=ch*it.value/sum;out.push({...it,x:cx,y:cy+oy,w:rw,h:rh});oy+=rh}cx+=rw;cw-=rw}else{let rh=rowArea/cw,ox=0;for(const it of row){let rw=cw*it.value/sum;out.push({...it,x:cx+ox,y:cy,w:rw,h:rh});ox+=rw}cy+=rh;ch-=rh}}return out}
+function filterRoles(){let q=$('#search').value.trim().toLowerCase(),cat=$('#category').value,min=+$('#minSalary').value;return raw.roles.filter(r=>(cat==='all'||r.category===cat)&&(+r.salary>=min)&&(!q||[r.title,r.category,r.city,...r.skills].join(' ').toLowerCase().includes(q)))}
+function layout(){roles=filterRoles();$('#empty').style.display=roles.length?'none':'grid';let box=canvas.parentElement.getBoundingClientRect();canvas.width=box.width*dpr;canvas.height=box.height*dpr;canvas.style.width=box.width+'px';canvas.style.height=box.height+'px';ctx.setTransform(dpr,0,0,dpr,0,0);let groups={};roles.forEach(r=>{(groups[r.category]??=[]).push(r)});let cats=Object.entries(groups).map(([cat,items])=>({cat,items,value:items.reduce((s,r)=>s+r.headcount,0)}));let cr=squarify(cats,10,10,box.width-20,box.height-20);rects=[];for(const c of cr){let inner=squarify(c.items.map(r=>({...r,value:r.headcount})),c.x+3,c.y+22,Math.max(1,c.w-6),Math.max(1,c.h-25));inner.forEach(r=>rects.push(r));}draw();side();}
+function draw(){ctx.clearRect(0,0,canvas.width/dpr,canvas.height/dpr);ctx.fillStyle='#070811';ctx.fillRect(0,0,canvas.width/dpr,canvas.height/dpr);let mode=$('#mode').value;let cats={};rects.forEach(r=>{cats[r.category]=cats[r.category]||{x:r.x,y:r.y,w:0,h:0};let c=cats[r.category];c.x=Math.min(c.x,r.x);c.y=Math.min(c.y,r.y);c.w=Math.max(c.w,r.x+r.w-c.x);c.h=Math.max(c.h,r.y+r.h-c.y)});Object.entries(cats).forEach(([name,c])=>{ctx.fillStyle='rgba(255,255,255,.45)';ctx.font='700 11px system-ui';ctx.fillText(name,c.x+4,c.y-4)});for(const r of rects){let t=norm(metric(r),mode),pad=1.2,x=r.x+pad,y=r.y+pad,w=Math.max(0,r.w-pad*2),h=Math.max(0,r.h-pad*2);ctx.fillStyle=color(t,hover===r?.85:.64);ctx.fillRect(x,y,w,h);if(hover===r){ctx.strokeStyle='white';ctx.lineWidth=2;ctx.strokeRect(x,y,w,h)}if(w>54&&h>24){ctx.save();ctx.beginPath();ctx.rect(x+5,y+4,w-10,h-8);ctx.clip();ctx.fillStyle=textColorFor(t);ctx.font=`800 ${Math.min(14,Math.max(10,w/12))}px system-ui`;ctx.fillText(r.title,x+6,y+6);if(h>42){ctx.font='600 11px system-ui';ctx.fillStyle='rgba(255,255,255,.72)';ctx.fillText(`${fmt(r.headcount)} · ₹${r.salary}L · ${metric(r)}${$('#mode').value==='salary'?'L':''}`,x+6,y+25)}ctx.restore()}}
+}
+function hit(e){let b=canvas.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top;for(let i=rects.length-1;i>=0;i--){let r=rects[i];if(x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h)return r}return null}
+function showTip(r,e){tip.querySelector('.tt-title').textContent=r.title;tip.querySelector('.tt-cat').textContent=r.category+' · '+r.city;tip.querySelector('.tt-grid').innerHTML=`<div class=tt-metric><b>${fmt(r.headcount)}</b><span>Approx. demand weight</span></div><div class=tt-metric><b>₹${r.salary}L</b><span>Salary band</span></div><div class=tt-metric><b>${r.growth}%</b><span>Hiring growth</span></div><div class=tt-metric><b>${r.exposure}/10</b><span>AI exposure</span></div>`;tip.querySelector('.tt-rationale').textContent=r.rationale;tip.querySelector('.pillbox').innerHTML=r.skills.map(s=>`<span class=pill>${s}</span>`).join('');let x=e.clientX+16,y=e.clientY+16;if(x+400>innerWidth)x=e.clientX-410;if(y+260>innerHeight)y=e.clientY-270;tip.style.left=x+'px';tip.style.top=y+'px';tip.classList.add('show')}
+function side(){let mode=$('#mode').value,[title,copy,lo,hi]=modeInfo[mode];$('#sideTitle').textContent=title;$('#sideCopy').textContent=copy;$('#legendLow').textContent=lo;$('#legendHigh').textContent=hi;let top=[...roles].sort((a,b)=>metric(b)-metric(a)).slice(0,9);$('#topList').innerHTML=top.map(r=>`<div class=barrow><span>${r.title.split('/')[0]}</span><div class=track><div class=fill style="width:${norm(metric(r),mode)*100}%"></div></div><b>${metric(r)}</b></div>`).join('')}
+function cityPanels(){let max=Math.max(...raw.cities.map(c=>c.share));$('#cities').innerHTML=raw.cities.map(c=>`<div class=city><strong>${c.city}</strong><div class=track title="${c.specialization}"><div class=fill style="width:${c.share/max*100}%"></div></div><span>${c.share}%</span></div>`).join('');let vals=raw.monthlyIndex.filter(d=>d.index),mx=Math.max(...vals.map(d=>d.index));$('#pulse').innerHTML=raw.monthlyIndex.map(d=>`<div class=city><strong>${d.month}</strong><div class=track><div class=fill style="width:${d.index?d.index/mx*100:15}%"></div></div><span>${d.index||'—'}</span></div>`).join('')}
+async function init(){raw=await fetch('data.json').then(r=>r.json());$('#kRevenue').textContent='$'+raw.marketStats.techRevenueUsdBn+'B';$('#kWorkforce').textContent=raw.marketStats.techWorkforceMn+'M';$('#kGcc').textContent=raw.marketStats.gccCenters+'+';$('#kAi').textContent=raw.marketStats.aiHiringYoYRange;[...new Set(raw.roles.map(r=>r.category))].forEach(c=>$('#category').insertAdjacentHTML('beforeend',`<option>${c}</option>`));cityPanels();layout();}
+canvas.addEventListener('mousemove',e=>{let r=hit(e);if(r!==hover){hover=r;draw()} if(r)showTip(r,e);else tip.classList.remove('show')});canvas.addEventListener('mouseleave',()=>{hover=null;tip.classList.remove('show');draw()});['mode','category','search','minSalary'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',layout));addEventListener('resize',()=>requestAnimationFrame(layout));init();
+</script>
+</body>
+</html>
