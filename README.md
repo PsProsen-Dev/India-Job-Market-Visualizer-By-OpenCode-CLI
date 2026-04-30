@@ -1,125 +1,86 @@
-# India Job Market Visualizer
+# India Jobs Market Visualizer 🇮🇳
 
-A research tool that visualizes Indian occupations from PLFS (Periodic Labour Force Survey) data. Inspired by [Karpathy's US Job Market Visualizer](https://karpathy.ai/jobs/).
+A production-grade, Karpathy-style interactive treemap for India’s 2024–2025 tech job market.
 
-## About
+Inspired by Andrej Karpathy’s [`karpathy/jobs`](https://github.com/karpathy/jobs) and the live US visualizer at <https://karpathy.ai/jobs/>. This version retargets the concept to India using a curated, auditable static dataset covering AI/ML demand, GCC growth, salaries, city concentration, remote readiness, and AI exposure.
 
-This tool visualizes **occupations** from India's labour market data:
-- Data source: PLFS (Periodic Labour Force Survey) from MOSPI
-- Occupation codes: NCO 2015 (National Classification of Occupations)
-- Metrics: Employment count, salary, growth outlook, education, AI exposure
+## What it visualizes
 
-## Features
+- **Area** = approximate role demand / workforce weight
+- **Color layer** = selectable metric:
+  - AI Exposure
+  - Hiring Growth
+  - Salary
+  - Demand Score
+  - Remote Readiness
+- **Hover tooltip** = role, category, city hubs, salary, growth, exposure rationale, and skills
+- **Side ranking** = top roles for the selected metric
+- **City panel** = Bengaluru, Hyderabad, Pune, Chennai, NCR, Mumbai and Tier-2 hub concentration
+- **JobSpeak panel** = monthly 2025 hiring pulse
 
-- **Treemap Visualization**: Rectangle area proportional to employment
-- **Color Layers**: Toggle between Growth Outlook, Median Salary, Education, AI Exposure
-- **AI Exposure Scoring**: LLM-powered analysis for each occupation (adapted for India context)
-- **Interactive**: Hover for details, click for more info
+## Production features
 
-## Quick Start
+- Static GitHub Pages-ready site
+- No build step required
+- No framework or runtime dependency
+- CDN-free and tracking-free
+- Responsive layout for desktop and mobile
+- Accessible controls using native inputs
+- Data isolated in `site/data.json`
+- Single-file frontend in `site/index.html`
 
-### Prerequisites
-- Python 3.9+
-- OpenRouter API key (for AI scoring) - optional, fallback scoring available
-
-### Installation
-
-```bash
-# Clone the repo
-git clone https://github.com/PsProsen-Dev/India-Job-Market-Visualizer-By-OpenCode-CLI
-cd India-Job-Market-Visualizer-By-OpenCode-CLI
-
-# Install dependencies
-pip install pandas numpy httpx python-dotenv
-```
-
-### Generate Data
-
-1. **Aggregate PLFS data** (if you have raw data):
-```bash
-python scripts/aggregate_plfs.py
-```
-
-2. **Score AI exposure** (optional - fallback available):
-```bash
-# Create .env file with your API key
-echo "OPENROUTER_API_KEY=your_key_here" > .env
-python scripts/score.py
-
-# OR use fallback scoring (no API needed)
-python scripts/score_fallback.py
-```
-
-3. **Build site data**:
-```bash
-python scripts/build_site_data.py
-```
-
-### View Locally
+## Run locally
 
 ```bash
 cd site
 python -m http.server 8000
-# Open http://localhost:8000
+# open http://localhost:8000
 ```
 
-## File Structure
+## Deploy on GitHub Pages
 
-```
-India-Job-Market-Visualizer-By-OpenCode-CLI/
-├── scripts/
-│   ├── nco_mapping.py       # NCO 2015 occupation codes
-│   ├── aggregate_plfs.py    # Aggregate PLFS data to occupations
-│   ├── score.py             # AI exposure scoring (LLM)
-│   ├── score_fallback.py    # AI exposure scoring (fallback)
-│   └── build_site_data.py   # Build data.json for visualization
-├── data/
-│   ├── india_occupations_stats.json   # Full occupation statistics
-│   ├── occupations.json               # Occupation list
-│   ├── occupations.csv                 # CSV with metrics
-│   └── india_scores.json              # AI exposure scores
-├── site/
-│   ├── index.html          # Main visualization (treemap)
-│   └── data.json           # Compact data for frontend
-├── README.md
-└── .env.example             # Environment variables template
+1. Open repository **Settings** → **Pages**
+2. Source: **Deploy from a branch**
+3. Branch: `main`
+4. Folder: `/site`
+5. Save
+
+Your visualizer will be served from the GitHub Pages URL for this repository.
+
+## Repository structure
+
+```text
+site/
+├── index.html   # Production static app
+└── data.json    # India jobs market dataset
+README.md
 ```
 
-## Data Pipeline
+## Dataset methodology
 
-1. **PLFS Raw Data** → Aggregate by NCO code → `india_occupations_stats.json`
-2. **Scoring** → LLM analysis or fallback heuristics → `india_scores.json`
-3. **Build** → Merge stats + scores → `site/data.json`
-4. **Visualize** → Treemap in browser
+This visualizer uses a curated market-intelligence dataset derived from the provided research brief and public labour-market signals. The role records include approximate demand weights, salary bands in INR LPA, 2025 hiring growth, heuristic demand score, remote readiness, AI exposure score, core city hubs, and skill tags.
 
-## Technologies
+The AI exposure score follows the spirit of the Karpathy rubric: digital, computer-mediated work scores higher because current AI systems act most directly on text, code, analysis, design and communication. A high exposure score means **AI will reshape the work**, not that the role will disappear.
 
-- **Frontend**: Pure HTML/JS (no framework)
-- **Backend**: Python scripts for data processing
-- **AI**: OpenRouter API (Gemini Flash) for scoring (optional)
-- **Data**: PLFS survey micro-data
+## India context represented
 
-## India-Specific Considerations
+- FY2025 tech industry revenue: about **$282.6B**
+- FY2025 tech workforce: about **5.8M**
+- FY2025 net new hires: about **126K**
+- GCC workforce: about **2.4M**
+- GCC centers: **1,700+**
+- AI/ML hiring: recurring **25–54% YoY** growth signals in 2025
+- Major hiring hubs: Bengaluru, Hyderabad, Pune, Chennai, Delhi NCR, Mumbai, and Tier-2 expansion cities
 
-- Uses NCO 2015 occupation codes (not SOC like US)
-- Salary in INR (₹) per month
-- Categories: Professionals, Technicians, Service Workers, Agriculture, etc.
-- Female workforce percentage included
-- Urban/Rural distribution
+## Caveats
 
-## Known Limitations
-
-- PLFS data may have sampling limitations
-- AI exposure scores are rough estimates (LLM or heuristics)
-- Occupation descriptions are basic (no detailed scraping)
-- Growth outlook is estimated based on category trends
+This is not an official economic forecast. It is a visual exploration tool, similar in spirit to the original Karpathy project. The numbers are approximate and intended for comparative visualization, not payroll planning, investment decisions, or policy conclusions.
 
 ## Credits
 
-- Inspired by [Andrej Karpathy](https://karpathy.ai/) and his [US Job Market Visualizer](https://karpathy.ai/jobs/)
-- Data from [MOSPI](https://www.mospi.gov.in/) PLFS survey
-- Occupation codes from [NCO 2015](https://dge.gov.in/dge/hi/nco-2015)
+- Original concept: [Andrej Karpathy / jobs](https://github.com/karpathy/jobs)
+- India market research: uploaded project brief covering NASSCOM, Naukri JobSpeak, GCC reports, salary guides, and AI workforce disruption context
 
 ## License
 
-MIT License - Feel free to use and modify!
+MIT
