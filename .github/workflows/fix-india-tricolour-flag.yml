@@ -1,0 +1,71 @@
+name: Fix India Tricolour Flag
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fix-india-tricolour-flag.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-flag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Patch flag styling
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          files = [Path('rich/index.html'), Path('index.html')]
+          improved_css = (
+            ".flag{position:relative;display:grid;width:78px;height:52px;border-radius:8px;"
+            "overflow:hidden;border:1px solid rgba(255,255,255,.35);box-shadow:0 8px 24px rgba(0,0,0,.25)}"
+            ".flag i{display:block;min-height:0}"
+            ".flag i:nth-child(1){background:#ff9933}"
+            ".flag i:nth-child(2){background:#fff}"
+            ".flag i:nth-child(3){background:#138808}"
+            ".flag:after{content:\"\";position:absolute;left:50%;top:50%;width:16px;height:16px;"
+            "transform:translate(-50%,-50%);border:2px solid #000080;border-radius:50%;"
+            "background:repeating-conic-gradient(from 0deg,#000080 0 3deg,transparent 3deg 15deg)}"
+          )
+
+          compact_pattern = re.compile(
+            r"\.flag\{[^}]*\}\.flag i\{[^}]*\}\.flag i:nth-child\(1\)\{[^}]*\}\.flag i:nth-child\(2\)\{[^}]*\}\.flag i:nth-child\(3\)\{[^}]*\}"
+          )
+
+          changed = False
+          for path in files:
+            if not path.exists():
+              continue
+            text = path.read_text(encoding='utf-8')
+            new_text, count = compact_pattern.subn(improved_css, text, count=1)
+            if count:
+              path.write_text(new_text, encoding='utf-8')
+              print(f'Patched {path}')
+              changed = True
+            else:
+              print(f'No matching compact flag CSS found in {path}')
+
+          if not changed:
+            raise SystemExit('No files were patched')
+          PY
+
+      - name: Commit flag fix
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rich/index.html index.html
+          git commit -m "Fix India flag tricolour styling"
+          git push
